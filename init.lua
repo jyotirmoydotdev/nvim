@@ -25,6 +25,13 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+require("telescope").setup{
+  defaults = {
+    file_ignore_patterns = {
+      "node_modules",
+    },
+  },
+}
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
